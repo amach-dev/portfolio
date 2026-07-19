@@ -1,0 +1,80 @@
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--space-2xl) var(--space-lg);
+  background: var(--color-bg-alt);
+  position: relative;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.brand { max-width: 340px; }
+
+.logo {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1.25rem;
+  display: inline-flex;
+  gap: 0.3rem;
+}
+
+.logoBracket { color: var(--color-primary); }
+
+.tagline {
+  margin-top: var(--space-sm);
+  color: var(--color-text-secondary);
+  font-size: var(--fs-small);
+  line-height: 1.7;
+}
+
+.columnTitle {
+  font-size: var(--fs-small);
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.column a {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-small);
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.column a:hover {
+  color: var(--color-primary-light);
+  padding-left: 4px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+}
+
+.builtWith { color: var(--color-text-muted); }
+
+@media (min-width: 700px) {
+  .top {
+    grid-template-columns: 1.3fr 1fr 1fr;
+  }
+  .bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

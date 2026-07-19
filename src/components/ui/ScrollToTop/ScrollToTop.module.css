@@ -1,0 +1,32 @@
+.btn {
+  position: fixed;
+  right: clamp(1rem, 4vw, 2.5rem);
+  bottom: clamp(1rem, 4vw, 2.5rem);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-card);
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-primary-light);
+  box-shadow: var(--shadow-md);
+  z-index: 60;
+  opacity: 0;
+  transform: translateY(16px) scale(0.9);
+  pointer-events: none;
+  transition: opacity var(--transition-base), transform var(--transition-base), background var(--transition-fast), color var(--transition-fast);
+}
+
+.btn.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.btn:hover {
+  background: var(--gradient-primary);
+  color: white;
+  transform: translateY(-4px) scale(1.05);
+}

@@ -1,0 +1,111 @@
+.section {
+  padding-block: var(--space-3xl);
+  background: var(--color-bg-alt);
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 7px;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-primary), transparent 95%);
+  opacity: 0.4;
+}
+
+.item {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.node {
+  position: absolute;
+  top: 6px;
+  left: -2rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+}
+
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card:hover {
+  border-color: var(--color-border-strong);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-primary-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.title {
+  font-size: var(--fs-h3);
+  margin: 0.4rem 0 0.6rem;
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-small);
+  line-height: 1.75;
+}
+
+@media (min-width: 860px) {
+  .timeline {
+    padding-left: 0;
+  }
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .item {
+    width: calc(50% - 2.5rem);
+  }
+  .itemLeft {
+    margin-right: auto;
+    transform: translateX(-24px);
+  }
+  .itemRight {
+    margin-left: auto;
+    transform: translateX(24px);
+  }
+  .item.visible {
+    transform: translateX(0);
+  }
+  .itemLeft .node {
+    left: auto;
+    right: -2.9rem;
+  }
+  .itemRight .node {
+    left: -2.9rem;
+  }
+}

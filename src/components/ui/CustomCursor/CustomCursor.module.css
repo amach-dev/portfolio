@@ -1,0 +1,40 @@
+.dot, .ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  will-change: transform;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--color-primary-light);
+  transform: translate(-50%, -50%);
+  margin-left: -3px;
+  margin-top: -3px;
+}
+
+.ring {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid rgba(59, 130, 246, 0.5);
+  margin-left: -17px;
+  margin-top: -17px;
+  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.ring.hover {
+  width: 54px;
+  height: 54px;
+  margin-left: -27px;
+  margin-top: -27px;
+  background: rgba(59, 130, 246, 0.1);
+  border-color: var(--color-primary-light);
+}
+
+@media (pointer: coarse) {
+  .dot, .ring { display: none; }
+}
