@@ -11,7 +11,7 @@ export const personalInfo = {
     github: 'https://github.com/amach-dev',
     instagram: 'https://instagram.com/achraf_abdelmounaim',
     whatsapp: 'https://wa.me/+213776999170',
-    facebook: 'https://facebook.com/achraf_abdelmounaim',
+    facebook: 'https://facebook.com/achraf.abdelmounaim',
     tiktok: 'https://tiktok.com/amara_abdelmounaim'
   },
 };
@@ -187,7 +187,7 @@ export const contactMethods = [
   { id: 'github', label: 'GitHub', value: '@amach-dev', href: personalInfo.social.github, icon: 'github' },
   { id: 'instagram', label: 'Instagram', value: '@achraf_abdelmounaim', href: personalInfo.social.instagram, icon: 'instagram' },
   { id: 'whatsapp', label: 'WhatsApp', value: 'Message me', href: personalInfo.social.whatsapp, icon: 'whatsapp' },
-  { id: 'facebook', label: 'Facebook', value: '@amach-dev', href: personalInfo.social.facebook, icon: 'facebook' },
-  { id: 'tiktok', label: 'Tik Tok', value: '@amach-dev', href: personalInfo.social.tiktok, icon: 'tiktok'}
-
+  { id: 'facebook', label: 'Facebook', value: '@achraf.abdelmounaim', href: personalInfo.social.facebook, icon: 'facebook' }
+  
 ];
+// { id: 'tiktok', label: 'Tik Tok', value: 'Unknown', href: personalInfo.social.tiktok, icon: 'tiktok'}

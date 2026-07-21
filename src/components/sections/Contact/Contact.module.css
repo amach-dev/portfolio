@@ -3,13 +3,11 @@
   background: var(--color-bg-alt);
 }
 
-/* تم دمج كل خصائص الكروت في كلاس واحد وتغيير اسمه ليناسب وظيفته كـ Grid */
 .methodsGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-md);
   
-  /* خصائص الحركة */
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -20,24 +18,19 @@
   transform: translateY(0);
 }
 
-/* تحسين الشكل في الشاشات المتوسطة والكبيرة لملء الفراغ */
 @media (min-width: 640px) {
   .methodsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* في الشاشات الكبيرة جداً، يمكن جعل الشبكة أعرض إذا كانت الكروت لا تزال صغيرة */
 @media (min-width: 1024px) {
   .methodsGrid {
-    max-width: 800px; /* تحديد أقصى عرض للكروت حتى لاتمتد بشكل مبالغ فيه */
-    margin-inline: auto; /* توسيط الكروت */
+    max-width: 800px;
+    margin-inline: auto;
   }
 }
 
-/* ----------------------------------- */
-/* تنسيقات الكارد نفسها (بدون تغيير)  */
-/* ----------------------------------- */
 
 .methodCard {
   display: flex;
