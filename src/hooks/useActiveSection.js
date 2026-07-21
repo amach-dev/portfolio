@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react';
 
-/**
- * Tracks which section id is currently most visible in the viewport,
- * and whether the page has been scrolled past a threshold (for navbar blur).
- */
+
 export function useActiveSection(sectionIds = [], offset = 120) {
   const [activeId, setActiveId] = useState(sectionIds[0] || '');
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,6 +18,7 @@ export function useActiveSection(sectionIds = [], offset = 120) {
           current = id;
         }
       }
+      
       setActiveId(current);
     }
 

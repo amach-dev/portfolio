@@ -2,5 +2,5 @@
   width: 100%;
   max-width: var(--container-width);
   margin-inline: auto;
-  padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+  padding-inline: 16px;
 }

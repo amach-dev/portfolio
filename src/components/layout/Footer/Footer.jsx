@@ -58,7 +58,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>&copy; {year} {personalInfo.name}. All rights reserved.</p>
-          <p className={styles.builtWith}>Built with React &amp; a lot of coffee.</p>
+          <p className={styles.builtWith}>Built with React .</p>
         </div>
       </Container>
     </footer>

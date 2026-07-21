@@ -11,6 +11,8 @@ export const personalInfo = {
     github: 'https://github.com/amach-dev',
     instagram: 'https://instagram.com/achraf_abdelmounaim',
     whatsapp: 'https://wa.me/+213776999170',
+    facebook: 'https://facebook.com/achraf_abdelmounaim',
+    tiktok: 'https://tiktok.com/amara_abdelmounaim'
   },
 };
 
@@ -27,8 +29,6 @@ export const aboutContent = {
   heading: "Engineering reliable systems, end to end",
   paragraphs: [
     "I'm a backend-focused software engineer who finds real satisfaction in the parts of an application most users never see — the authentication flow that quietly keeps accounts safe, the API contract that makes a frontend team's life easier, the query that used to take four seconds and now takes forty milliseconds.",
-    "Most of my work centers on Java and Spring Boot: REST APIs, role-based authorization, JWT and refresh-token authentication, and database design that holds up under real traffic rather than just demo data. I pair that with React on the frontend and Tauri when a project needs to live on the desktop instead of the browser — same engineering discipline, different runtime.",
-    "I care about clean architecture because I've maintained the alternative. Clear layering, meaningful naming, and tests that actually catch regressions save weeks over a project's lifetime. I containerize what I build with Docker so environments stop being a source of surprises, and I profile before I optimize so performance work is guided by evidence, not guesses.",
   ],
   focusAreas: [
     'Backend Development', 'REST APIs', 'Authentication', 'Desktop Applications',
@@ -100,7 +100,7 @@ export const skillCategories = [
 export const projects = [
   {
     id: 'job-platform',
-    title: 'Job Platform',
+    title: 'Tech-Job',
     description: 'A full-featured job board connecting recruiters and candidates, with role-based dashboards, application tracking, and secure authentication.',
     stack: ['Java', 'Spring Boot', 'Spring Security', 'MySQL', 'Docker'],
     demo: 'https://demo.example.com/job-platform',
@@ -187,4 +187,7 @@ export const contactMethods = [
   { id: 'github', label: 'GitHub', value: '@amach-dev', href: personalInfo.social.github, icon: 'github' },
   { id: 'instagram', label: 'Instagram', value: '@achraf_abdelmounaim', href: personalInfo.social.instagram, icon: 'instagram' },
   { id: 'whatsapp', label: 'WhatsApp', value: 'Message me', href: personalInfo.social.whatsapp, icon: 'whatsapp' },
+  { id: 'facebook', label: 'Facebook', value: '@amach-dev', href: personalInfo.social.facebook, icon: 'facebook' },
+  { id: 'tiktok', label: 'Tik Tok', value: '@amach-dev', href: personalInfo.social.tiktok, icon: 'tiktok'}
+
 ];

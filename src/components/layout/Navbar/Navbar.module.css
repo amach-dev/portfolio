@@ -21,9 +21,9 @@
 
 .inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: var(--space-md);
+  align-items: center;
+  gap: var(--space-xl);
 }
 
 .logo {
@@ -83,8 +83,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  z-index: 110;
+  justify-content: space-between ;
+  
+  z-index: 100;
 }
 
 .menuToggle span {
@@ -163,4 +164,25 @@
   .navActions { display: block; }
   .menuToggle { display: none; }
   .mobileNav { display: none; }
+}
+
+/* Tablet: show desktop-style nav but with compact spacing */
+@media (min-width: 600px) and (max-width: 899px) {
+  .desktopNav { display: block; }
+  .menuToggle { display: none; }
+  .mobileNav { display: none; }
+  .navActions { display: none; }
+  .navList { gap: clamp(var(--space-sm), 2vw, var(--space-md)); }
+  .logo { font-size: 1.05rem; }
+  .navLink { font-size: calc(var(--fs-small) - 1px); }
+}
+
+/* Mobile: compact layout, hamburger visible */
+@media (max-width: 599px) {
+  .inner { justify-content: space-between; gap: var(--space-md); }
+  .logo { font-size: 1rem; }
+  .navLink { font-size: 0.95rem; }
+  .desktopNav { display: none; }
+  .navActions { display: none; }
+  .menuToggle { display: flex; }
 }

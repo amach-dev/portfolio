@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Container from '../../ui/Container/Container';
 import Button from '../../ui/Button/Button';
 import { navLinks, personalInfo,name } from '../../../data/portfolioData';
@@ -14,6 +14,18 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const ids = navLinks.map((l) => l.id);
   const { activeId, isScrolled } = useActiveSection(ids);
+
+  // Close mobile menu on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isOpen]);
 
   function handleLinkClick(id) {
     setIsOpen(false);

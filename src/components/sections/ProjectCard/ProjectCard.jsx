@@ -33,7 +33,7 @@ export default function ProjectCard({ project, index = 0 }) {
 
           <div className={styles.actions}>
 
-            <a
+            {/* <a
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
@@ -44,7 +44,7 @@ export default function ProjectCard({ project, index = 0 }) {
                 <path d="M14 4h6v6M20 4l-8 8M6 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               Live Demo
-            </a>
+            </a> */}
           </div>
         </div>
       </Card>

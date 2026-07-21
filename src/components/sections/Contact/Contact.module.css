@@ -3,92 +3,41 @@
   background: var(--color-bg-alt);
 }
 
-.grid {
+/* تم دمج كل خصائص الكروت في كلاس واحد وتغيير اسمه ليناسب وظيفته كـ Grid */
+.methodsGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-lg);
-}
-
-.formCol, .cardsCol {
+  gap: var(--space-md);
+  
+  /* خصائص الحركة */
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.formCol.visible, .cardsCol.visible {
+.methodsGrid.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.formCard {
-  padding: var(--space-lg);
+/* تحسين الشكل في الشاشات المتوسطة والكبيرة لملء الفراغ */
+@media (min-width: 640px) {
+  .methodsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
+/* في الشاشات الكبيرة جداً، يمكن جعل الشبكة أعرض إذا كانت الكروت لا تزال صغيرة */
+@media (min-width: 1024px) {
+  .methodsGrid {
+    max-width: 800px; /* تحديد أقصى عرض للكروت حتى لاتمتد بشكل مبالغ فيه */
+    margin-inline: auto; /* توسيط الكروت */
+  }
 }
 
-.row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-md);
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.field label {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-text);
-}
-
-.field input,
-.field textarea {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius-sm);
-  padding: 0.8rem 1rem;
-  color: var(--color-text);
-  font-size: var(--fs-small);
-  resize: vertical;
-  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.field input::placeholder,
-.field textarea::placeholder {
-  color: var(--color-text-muted);
-}
-
-.field input:focus,
-.field textarea:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  background: rgba(59, 130, 246, 0.05);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
-}
-
-.submitBtn {
-  width: 100%;
-  margin-top: 0.5rem;
-}
-
-.successNote {
-  text-align: center;
-  color: var(--color-primary-light);
-  font-size: var(--fs-small);
-}
-
-.cardsCol {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
+/* ----------------------------------- */
+/* تنسيقات الكارد نفسها (بدون تغيير)  */
+/* ----------------------------------- */
 
 .methodCard {
   display: flex;
@@ -147,12 +96,4 @@
 .methodCard:hover .methodArrow {
   transform: translate(2px, -2px);
   color: var(--color-primary-light);
-}
-
-@media (min-width: 640px) {
-  .row { grid-template-columns: 1fr 1fr; }
-}
-
-@media (min-width: 960px) {
-  .grid { grid-template-columns: 1.3fr 1fr; align-items: start; }
 }
